@@ -1,4 +1,4 @@
-# idkit
+# idkit / I don't know it
 
 > Tiny, secure, zero-dependency ID and randomness toolkit for Node.js and
 > browsers.
