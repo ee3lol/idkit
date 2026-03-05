@@ -1,0 +1,106 @@
+{
+    "name": "idkit",
+    "version": "1.0.0",
+    "description": "A tiny, secure, zero-dependency ID and randomness toolkit for Node.js and browsers.",
+    "keywords": [
+        "id",
+        "uuid",
+        "ulid",
+        "nanoid",
+        "shortid",
+        "token",
+        "random",
+        "secure",
+        "invite-code",
+        "typescript",
+        "zero-dependency"
+    ],
+    "author": "ee3lol",
+    "license": "MIT",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./token": {
+            "import": "./dist/token.js",
+            "types": "./dist/token.d.ts"
+        },
+        "./shortId": {
+            "import": "./dist/shortId.js",
+            "types": "./dist/shortId.d.ts"
+        },
+        "./humanId": {
+            "import": "./dist/humanId.js",
+            "types": "./dist/humanId.d.ts"
+        },
+        "./inviteCode": {
+            "import": "./dist/inviteCode.js",
+            "types": "./dist/inviteCode.d.ts"
+        },
+        "./pattern": {
+            "import": "./dist/pattern.js",
+            "types": "./dist/pattern.d.ts"
+        },
+        "./timeId": {
+            "import": "./dist/timeId.js",
+            "types": "./dist/timeId.d.ts"
+        },
+        "./randomInt": {
+            "import": "./dist/randomInt.js",
+            "types": "./dist/randomInt.d.ts"
+        },
+        "./randomFloat": {
+            "import": "./dist/randomFloat.js",
+            "types": "./dist/randomFloat.d.ts"
+        },
+        "./shuffle": {
+            "import": "./dist/shuffle.js",
+            "types": "./dist/shuffle.d.ts"
+        },
+        "./pick": {
+            "import": "./dist/pick.js",
+            "types": "./dist/pick.d.ts"
+        },
+        "./uniqueId": {
+            "import": "./dist/uniqueId.js",
+            "types": "./dist/uniqueId.d.ts"
+        },
+        "./seeded": {
+            "import": "./dist/seeded.js",
+            "types": "./dist/seeded.d.ts"
+        },
+        "./collisionProbability": {
+            "import": "./dist/collisionProbability.js",
+            "types": "./dist/collisionProbability.d.ts"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "typecheck": "tsc --noEmit",
+        "clean": "node --eval \"import('node:fs').then(({default:fs})=>{if(fs.existsSync('dist'))fs.rmSync('dist',{recursive:true})})\""
+    },
+    "devDependencies": {
+        "typescript": "^5.4.5"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ee3lol/idkit"
+    },
+    "bugs": {
+        "url": "https://github.com/ee3lol/idkit/issues"
+    },
+    "homepage": "https://github.com/ee3lol/idkit#readme"
+}
