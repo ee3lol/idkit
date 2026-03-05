@@ -1,5 +1,5 @@
 /**
- * Shared alphabet constants used across idkit modules.
+ * Shared alphabet constants used across idkit.js modules.
  */
 
 /** A–Z, a–z, 0–9 (62 characters) */

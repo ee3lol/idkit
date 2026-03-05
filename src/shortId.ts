@@ -21,7 +21,7 @@ export interface ShortIdOptions {
 
 export function shortId(length: number, options: ShortIdOptions = {}): string {
   if (!Number.isInteger(length) || length <= 0) {
-    throw new RangeError(`[idkit] shortId: length must be a positive integer, got ${length}`);
+    throw new RangeError(`[idkit.js] shortId: length must be a positive integer, got ${length}`);
   }
   const alphabet = options.urlSafe ? URL_SAFE : ALPHANUMERIC;
   return randomString(length, alphabet);

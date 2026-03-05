@@ -24,7 +24,7 @@ export interface InviteCodeOptions {
 
 export function inviteCode(length: number, options: InviteCodeOptions = {}): string {
   if (!Number.isInteger(length) || length <= 0) {
-    throw new RangeError(`[idkit] inviteCode: length must be a positive integer, got ${length}`);
+    throw new RangeError(`[idkit.js] inviteCode: length must be a positive integer, got ${length}`);
   }
 
   const raw = randomString(length, INVITE_SAFE);
@@ -36,7 +36,7 @@ export function inviteCode(length: number, options: InviteCodeOptions = {}): str
   const groupSize = options.group;
   if (!Number.isInteger(groupSize) || groupSize <= 0) {
     throw new RangeError(
-      `[idkit] inviteCode: options.group must be a positive integer, got ${groupSize}`
+      `[idkit.js] inviteCode: options.group must be a positive integer, got ${groupSize}`
     );
   }
 

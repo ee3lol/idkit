@@ -11,7 +11,7 @@ import { getRandomBytes } from "./randomBytes.js";
  */
 export function randomIndex(max: number): number {
   if (max <= 0 || !Number.isInteger(max)) {
-    throw new RangeError(`[idkit] randomIndex: max must be a positive integer, got ${max}`);
+    throw new RangeError(`[idkit.js] randomIndex: max must be a positive integer, got ${max}`);
   }
   if (max === 1) return 0;
 
@@ -38,7 +38,7 @@ export function randomIndex(max: number): number {
  */
 export function randomChar(alphabet: string): string {
   if (!alphabet || alphabet.length === 0) {
-    throw new RangeError("[idkit] randomChar: alphabet must be a non-empty string");
+    throw new RangeError("[idkit.js] randomChar: alphabet must be a non-empty string");
   }
   return alphabet[randomIndex(alphabet.length)]!;
 }
@@ -48,7 +48,7 @@ export function randomChar(alphabet: string): string {
  */
 export function randomString(length: number, alphabet: string): string {
   if (length <= 0 || !Number.isInteger(length)) {
-    throw new RangeError(`[idkit] randomString: length must be a positive integer, got ${length}`);
+    throw new RangeError(`[idkit.js] randomString: length must be a positive integer, got ${length}`);
   }
   let result = "";
   for (let i = 0; i < length; i++) {

@@ -21,14 +21,14 @@ export function uniqueId(
   maxAttempts = 100
 ): string {
   if (typeof generator !== "function") {
-    throw new TypeError("[idkit] uniqueId: generator must be a function");
+    throw new TypeError("[idkit.js] uniqueId: generator must be a function");
   }
   if (!(store instanceof Set)) {
-    throw new TypeError("[idkit] uniqueId: store must be a Set<string>");
+    throw new TypeError("[idkit.js] uniqueId: store must be a Set<string>");
   }
   if (!Number.isInteger(maxAttempts) || maxAttempts <= 0) {
     throw new RangeError(
-      `[idkit] uniqueId: maxAttempts must be a positive integer, got ${maxAttempts}`
+      `[idkit.js] uniqueId: maxAttempts must be a positive integer, got ${maxAttempts}`
     );
   }
 
@@ -41,7 +41,7 @@ export function uniqueId(
   }
 
   throw new Error(
-    `[idkit] uniqueId: failed to generate a unique ID after ${maxAttempts} attempts. ` +
+    `[idkit.js] uniqueId: failed to generate a unique ID after ${maxAttempts} attempts. ` +
       "Consider increasing the ID length or alphabet to reduce collisions."
   );
 }

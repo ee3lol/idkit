@@ -12,7 +12,7 @@ import { getRandomBytes } from "./utils/randomBytes.js";
 
 export function token(length: number): string {
   if (!Number.isInteger(length) || length <= 0) {
-    throw new RangeError(`[idkit] token: length must be a positive integer, got ${length}`);
+    throw new RangeError(`[idkit.js] token: length must be a positive integer, got ${length}`);
   }
 
   const byteCount = Math.ceil(length / 2);

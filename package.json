@@ -1,5 +1,5 @@
 {
-    "name": "idkit",
+    "name": "idkit.js.js",
     "version": "1.0.0",
     "description": "A tiny, secure, zero-dependency ID and randomness toolkit for Node.js and browsers.",
     "keywords": [

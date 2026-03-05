@@ -5,7 +5,7 @@
  * Designed for reproducible tests and deterministic simulations — NOT for security.
  *
  * @param seed - Any string. Same seed always produces the same sequence.
- * @returns A `SeededRng` object with deterministic versions of common idkit utilities.
+ * @returns A `SeededRng` object with deterministic versions of common idkit.js utilities.
  *
  * @example
  * const rng = seeded("test-seed")
@@ -105,7 +105,7 @@ export interface SeededRng {
 
 export function seeded(seed: string): SeededRng {
   if (typeof seed !== "string") {
-    throw new TypeError(`[idkit] seeded: seed must be a string, got ${typeof seed}`);
+    throw new TypeError(`[idkit.js] seeded: seed must be a string, got ${typeof seed}`);
   }
 
   const prng = new XorShift128Plus(seed);
@@ -126,7 +126,7 @@ export function seeded(seed: string): SeededRng {
     shortId(length: number, options: { urlSafe?: boolean } = {}): string {
       if (!Number.isInteger(length) || length <= 0) {
         throw new RangeError(
-          `[idkit] seeded.shortId: length must be a positive integer, got ${length}`
+          `[idkit.js] seeded.shortId: length must be a positive integer, got ${length}`
         );
       }
       const alphabet = options.urlSafe ? URL_SAFE : ALPHANUMERIC;
@@ -136,12 +136,12 @@ export function seeded(seed: string): SeededRng {
     randomInt(min: number, max: number): number {
       if (!Number.isInteger(min) || !Number.isInteger(max)) {
         throw new TypeError(
-          `[idkit] seeded.randomInt: min and max must be integers, got ${min} and ${max}`
+          `[idkit.js] seeded.randomInt: min and max must be integers, got ${min} and ${max}`
         );
       }
       if (min > max) {
         throw new RangeError(
-          `[idkit] seeded.randomInt: min (${min}) must be ≤ max (${max})`
+          `[idkit.js] seeded.randomInt: min (${min}) must be ≤ max (${max})`
         );
       }
       if (min === max) return min;
@@ -154,17 +154,17 @@ export function seeded(seed: string): SeededRng {
 
     pick<T>(array: ReadonlyArray<T>): T {
       if (!Array.isArray(array)) {
-        throw new TypeError("[idkit] seeded.pick: argument must be an array");
+        throw new TypeError("[idkit.js] seeded.pick: argument must be an array");
       }
       if (array.length === 0) {
-        throw new RangeError("[idkit] seeded.pick: cannot pick from an empty array");
+        throw new RangeError("[idkit.js] seeded.pick: cannot pick from an empty array");
       }
       return array[prng.nextIndex(array.length)]!;
     },
 
     shuffle<T>(array: ReadonlyArray<T>): T[] {
       if (!Array.isArray(array)) {
-        throw new TypeError("[idkit] seeded.shuffle: argument must be an array");
+        throw new TypeError("[idkit.js] seeded.shuffle: argument must be an array");
       }
       const result = [...array];
       for (let i = result.length - 1; i > 0; i--) {

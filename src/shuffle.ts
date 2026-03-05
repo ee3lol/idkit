@@ -14,7 +14,7 @@ import { randomIndex } from "./utils/crypto.js";
 
 export function shuffle<T>(array: ReadonlyArray<T>): T[] {
   if (!Array.isArray(array)) {
-    throw new TypeError("[idkit] shuffle: argument must be an array");
+    throw new TypeError("[idkit.js] shuffle: argument must be an array");
   }
 
   const result = [...array];

@@ -23,7 +23,7 @@ import { DIGITS, UPPERCASE, LOWERCASE, ALPHANUMERIC } from "./utils/alphabet.js"
 
 export function pattern(format: string): string {
   if (typeof format !== "string" || format.length === 0) {
-    throw new TypeError("[idkit] pattern: format must be a non-empty string");
+    throw new TypeError("[idkit.js] pattern: format must be a non-empty string");
   }
 
   let result = "";

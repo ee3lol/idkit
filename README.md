@@ -1,4 +1,4 @@
-# idkit / I don't know it
+# idkit.js / I don't know it dot javascript
 
 > Tiny, secure, zero-dependency ID and randomness toolkit for Node.js and
 > browsers.
@@ -9,11 +9,11 @@ and a few other things you probably didn’t know you needed until now.
 Yes, you _could_ write your own random ID generator in 6 lines.\
 Yes, it will probably break in production.
 
-`idkit` exists so you don't have to find out the hard way.
+`idkit.js` exists so you don't have to find out the hard way.
 
-[![npm version](https://img.shields.io/npm/v/idkit)](https://www.npmjs.com/package/idkit)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/idkit)](https://bundlephobia.com/package/idkit)
-[![license](https://img.shields.io/npm/l/idkit)](https://github.com/ee3lol/idkit/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/idkit.js)](https://www.npmjs.com/package/idkit.js)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/idkit.js)](https://bundlephobia.com/package/idkit.js)
+[![license](https://img.shields.io/npm/l/idkit.js)](https://github.com/ee3lol/idkit.js/blob/main/LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-first-blue)](https://www.typescriptlang.org/)
 
 ---
@@ -21,11 +21,11 @@ Yes, it will probably break in production.
 # Install
 
 ```bash
-npm install idkit
+npm install idkit.js
 # or
-pnpm add idkit
+pnpm add idkit.js
 # or
-yarn add idkit
+yarn add idkit.js
 ```
 
 ---
@@ -33,7 +33,7 @@ yarn add idkit
 # 10-Second Example
 
 ```ts
-import { humanId, inviteCode, shortId, timeId, token } from "idkit";
+import { humanId, inviteCode, shortId, timeId, token } from "idkit.js";
 
 token(32);
 // "f8a29c4d7f3a9e1b8c1d2a3b4e5f6a7b"
@@ -72,7 +72,7 @@ If this already solves your problem, you can stop reading and go ship something.
 ## Generate a Token
 
 ```ts
-import { token } from "idkit";
+import { token } from "idkit.js";
 
 token(32);
 ```
@@ -94,7 +94,7 @@ Perfect for:
 ## Short IDs
 
 ```ts
-import { shortId } from "idkit";
+import { shortId } from "idkit.js";
 
 shortId(8);
 ```
@@ -122,7 +122,7 @@ aB-_3kZ9mQ
 ## Human-Readable IDs
 
 ```ts
-import { humanId } from "idkit";
+import { humanId } from "idkit.js";
 
 humanId();
 ```
@@ -146,7 +146,7 @@ Good for:
 ## Invite Codes
 
 ```ts
-import { inviteCode } from "idkit";
+import { inviteCode } from "idkit.js";
 
 inviteCode(6);
 ```
@@ -176,7 +176,7 @@ Characters like `0`, `O`, `I`, `1`, `l` are removed to avoid confusion.
 ## Time-Sortable IDs
 
 ```ts
-import { timeId } from "idkit";
+import { timeId } from "idkit.js";
 
 timeId();
 ```
@@ -204,7 +204,7 @@ Great for:
 ## Pattern-Based IDs
 
 ```ts
-import { pattern } from "idkit";
+import { pattern } from "idkit.js";
 
 pattern("INV-####");
 pattern("USER-AAAA-####");
@@ -233,7 +233,7 @@ Pattern symbols:
 ### Random Integer
 
 ```ts
-import { randomInt } from "idkit";
+import { randomInt } from "idkit.js";
 
 randomInt(1, 100);
 ```
@@ -243,7 +243,7 @@ randomInt(1, 100);
 ### Random Float
 
 ```ts
-import { randomFloat } from "idkit";
+import { randomFloat } from "idkit.js";
 
 randomFloat();
 ```
@@ -253,7 +253,7 @@ randomFloat();
 ### Shuffle Array
 
 ```ts
-import { shuffle } from "idkit";
+import { shuffle } from "idkit.js";
 
 shuffle([1, 2, 3, 4]);
 ```
@@ -263,7 +263,7 @@ shuffle([1, 2, 3, 4]);
 ### Pick Random Element
 
 ```ts
-import { pick } from "idkit";
+import { pick } from "idkit.js";
 
 pick(["apple", "banana", "cherry"]);
 ```
@@ -273,7 +273,7 @@ pick(["apple", "banana", "cherry"]);
 # Collision-Safe IDs
 
 ```ts
-import { shortId, uniqueId } from "idkit";
+import { shortId, uniqueId } from "idkit.js";
 
 const ids = new Set();
 
@@ -289,7 +289,7 @@ Ensures no duplicates exist in your dataset.
 For deterministic testing:
 
 ```ts
-import { seeded } from "idkit";
+import { seeded } from "idkit.js";
 
 const rng = seeded("test-seed");
 
@@ -306,7 +306,7 @@ Not for security use.
 # Collision Probability Calculator
 
 ```ts
-import { collisionProbability } from "idkit";
+import { collisionProbability } from "idkit.js";
 
 collisionProbability({
   alphabet: 62,
@@ -335,7 +335,7 @@ It is **not fine** for:
 - invite codes
 - authentication
 
-`idkit` uses cryptographically secure randomness instead.
+`idkit.js` uses cryptographically secure randomness instead.
 
 ---
 
@@ -357,13 +357,13 @@ It is **not fine** for:
 Import everything:
 
 ```ts
-import { token } from "idkit";
+import { token } from "idkit.js";
 ```
 
 Or import individual modules:
 
 ```ts
-import token from "idkit/token";
+import token from "idkit.js/token";
 ```
 
 Your bundler will only include what you use.

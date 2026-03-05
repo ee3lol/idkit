@@ -28,17 +28,17 @@ export function collisionProbability(options: CollisionProbabilityOptions): numb
 
   if (!Number.isInteger(alphabet) || alphabet < 2) {
     throw new RangeError(
-      `[idkit] collisionProbability: alphabet must be an integer ≥ 2, got ${alphabet}`
+      `[idkit.js] collisionProbability: alphabet must be an integer ≥ 2, got ${alphabet}`
     );
   }
   if (!Number.isInteger(length) || length < 1) {
     throw new RangeError(
-      `[idkit] collisionProbability: length must be a positive integer, got ${length}`
+      `[idkit.js] collisionProbability: length must be a positive integer, got ${length}`
     );
   }
   if (!Number.isInteger(samples) || samples < 1) {
     throw new RangeError(
-      `[idkit] collisionProbability: samples must be a positive integer, got ${samples}`
+      `[idkit.js] collisionProbability: samples must be a positive integer, got ${samples}`
     );
   }
 

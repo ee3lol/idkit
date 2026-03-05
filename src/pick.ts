@@ -12,10 +12,10 @@ import { randomIndex } from "./utils/crypto.js";
 
 export function pick<T>(array: ReadonlyArray<T>): T {
   if (!Array.isArray(array)) {
-    throw new TypeError("[idkit] pick: argument must be an array");
+    throw new TypeError("[idkit.js] pick: argument must be an array");
   }
   if (array.length === 0) {
-    throw new RangeError("[idkit] pick: cannot pick from an empty array");
+    throw new RangeError("[idkit.js] pick: cannot pick from an empty array");
   }
   return array[randomIndex(array.length)]!;
 }

@@ -16,11 +16,11 @@ import { randomIndex } from "./utils/crypto.js";
 
 export function randomInt(min: number, max: number): number {
   if (!Number.isInteger(min) || !Number.isInteger(max)) {
-    throw new TypeError(`[idkit] randomInt: min and max must be integers, got ${min} and ${max}`);
+    throw new TypeError(`[idkit.js] randomInt: min and max must be integers, got ${min} and ${max}`);
   }
   if (min > max) {
     throw new RangeError(
-      `[idkit] randomInt: min (${min}) must be less than or equal to max (${max})`
+      `[idkit.js] randomInt: min (${min}) must be less than or equal to max (${max})`
     );
   }
   if (min === max) return min;

@@ -16,8 +16,8 @@ export function getRandomBytes(size: number): Uint8Array {
     typeof globalThis.crypto.getRandomValues !== "function"
   ) {
     throw new Error(
-      "[idkit] No secure random source available. " +
-        "idkit requires Node.js ≥ 18 or a modern browser with Web Crypto API support."
+      "[idkit.js] No secure random source available. " +
+        "idkit.js requires Node.js ≥ 18 or a modern browser with Web Crypto API support."
     );
   }
 
